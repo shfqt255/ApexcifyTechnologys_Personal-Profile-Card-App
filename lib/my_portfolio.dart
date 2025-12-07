@@ -26,15 +26,15 @@ class MyPortfolioAppState extends State<MyPortfolioApp> {
             icon: Icon(Icons.more_vert, color: Colors.white),
             onSelected: (value) {
               if (value == 'Home') {
-                logic!.ScrollToSection(logic.homeKey);
+                logic.ScrollToSection(logic.homeKey);
               } else if (value == 'About') {
-                logic!.ScrollToSection(logic.aboutKey);
+                logic.ScrollToSection(logic.aboutKey);
               } else if (value == 'Projects') {
-                logic!.ScrollToSection(logic.projectsKey);
+                logic.ScrollToSection(logic.projectsKey);
               } else if (value == 'Experience') {
-                logic!.ScrollToSection(logic.expKey);
+                logic.ScrollToSection(logic.expKey);
               } else if (value == 'Contacts') {
-                logic!.ScrollToSection(logic.contactsKey);
+                logic.ScrollToSection(logic.contactsKey);
               }
             },
             itemBuilder: (context) => [
@@ -49,7 +49,7 @@ class MyPortfolioAppState extends State<MyPortfolioApp> {
       ),
       //=======Body===========//
       body: SingleChildScrollView(
-        controller: logic!.scrollController,
+        controller: logic.scrollController,
         child: Padding(
           padding: EdgeInsets.all(10),
           child: Column(
